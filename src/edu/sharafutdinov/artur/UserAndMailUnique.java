@@ -67,10 +67,8 @@ public class UserAndMailUnique {
                 map.get(key).remove(0);
             }
             //map = new HashMap<>(new RemoveNonUnique(map,getSet()).clean());
-            if(!map.get(key)
-                    .toString()
-                    .replaceAll(",|\\d|!|\\?", ",").equalsIgnoreCase(getList1().toString()
-                            .replaceAll("^\\[|\\]$", "")
+            if(!getList1().contains(map.get(key)
+                            .toString()
                             .replaceAll(",|\\d|!|\\?", ","))) {
                 System.out.println(key + " -> " + map.get(key)
                         .toString()
